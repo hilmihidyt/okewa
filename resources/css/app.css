@@ -1,0 +1,22 @@
+.bg-whatsapp {
+    background: rgb(37,211,102);
+    background: linear-gradient(90deg, rgba(37,211,102,1) 0%, rgba(230,255,208,1) 35%, rgba(230,255,218,1) 100%);
+}
+
+.alert-whatsapp {
+    background-color: #e6ffda !important;
+    border-color: #e6ffda !important;
+    color: #111b21 !important;
+}
+
+.btn-whatsapp {
+    background-color: #25d366 !important;
+    border-color: #25d366 !important;
+    color: #fff !important;
+}
+
+.btn-whatsapp:hover, .btn-whatsapp:focus, .btn-whatsapp:active, .btn-whatsapp.active, .open .dropdown-toggle.btn-whatsapp {
+    background-color: #128c7e !important;
+    border-color: #128c7e !important;
+    color: #fff !important;
+}
