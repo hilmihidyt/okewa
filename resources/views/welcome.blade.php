@@ -27,7 +27,7 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-12 col-md-12 col-lg-6">
-            <div class="card bg-white rounded text-dark mb-3">
+            <div class="card bg-white border rounded text-dark mb-3">
                 <div class="card-header bg-white pb-0">
                     <div class="alert alert-whatsapp py-2 text-center">
                         <strong>Generate Whatsapp Link</strong>
@@ -130,13 +130,15 @@
                 </div>
             </div>
             <div id="shortenedCard" class="d-none">
-                <div class="card text-center mb-3 border bg-white">
-                    <div class="card-body">
-                        <div class="alert alert-whatsapp text-center" role="alert">
+                <div class="card text-center mb-3 border bg-white rounded">
+                    <div class="card-header bg-white pb-0">
+                        <div class="alert alert-whatsapp py-2 text-center" role="alert">
                             <strong>
                                 Your Link is Ready!
                             </strong>
                         </div>
+                    </div>
+                    <div class="card-body">
                         <div class="mb-3">
                             <div class="card w-50 mb-3 rounded mx-auto d-block">
                                 <div class="card-body">
