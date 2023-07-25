@@ -25,7 +25,7 @@ Route::get('about', function(){
 
 Route::post('whatsapp-link-generator',[ChatLinkController::class, 'generateWaLink'])->name('generate-whatsapp-link');
 
-Auth::routes();
+Auth::routes(['register' => false]);
 
 Route::get('chat-link/{id}/analytic',[AdminChatLinkController::class, 'analytic'])->name('chat-link.analytic')->middleware('auth');
 Route::resource('chat-link', AdminChatLinkController::class)->except(['create', 'edit', 'show','update'])->middleware('auth');
