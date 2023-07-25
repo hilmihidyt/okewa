@@ -14,6 +14,9 @@ use App\Http\Controllers\Admin\ChatLinkController as AdminChatLinkController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::get('optimized', function () {
+    \Artisan::call('optimize');
+});
 
 Route::get('/', function () {
     return view('welcome');

@@ -20,6 +20,46 @@
         <!-- Scripts -->
         @vite(['resources/sass/app.scss', 'resources/js/app.js'])
         @yield('styles')
+        <script type="text/javascript">
+            function callbackThen(response) {
+              // read Promise object
+              response.json().then(function(data) {
+                console.log(data);
+                if(data.success && data.score >= 0.6) {
+                   console.log('valid recaptcha');
+                } else {
+                   document.getElementById('form').addEventListener('submit', function(event) {
+                      event.preventDefault();
+                      Swal.fire({
+                         icon: 'error',
+                         title: 'Oops...',
+                         text: 'Invalid reCAPTCHA!',
+                      });
+                   });
+                }
+              });
+            }
+         
+            function callbackCatch(error){
+               console.error('Error:', error)
+            }
+            </script>
+         
+            {!! htmlScriptTagJsApi([
+               'callback_then' => 'callbackThen',
+               'callback_catch' => 'callbackCatch',
+            ]) !!}
+
+            <!-- Google tag (gtag.js) -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=G-7BVDQLYP9R"></script>
+            <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-7BVDQLYP9R');
+            </script>
+         </head>
     </head>
     <body>
         <div id="app">
@@ -64,6 +104,24 @@
             <main class="py-4 @hasSection('bg_color') @yield('bg_color') @else bg-white @endif">
                 @yield('content')
             </main>
+            <footer class="border border-top bg-white">
+                <div class="container py-3">
+                    <div class="row">
+                        <div class="d-flex justify-content-between">
+                            <div>
+                                <strong>
+                                    Copyright &copy; {{ date('Y') }} <a href="{{ config('app.url') }}" class="text-decoration-none fw-bold text-dark">{{ config('app.name') }}</a> by <a href="https://divisidev.com" target="_blank" class="text-decoration-none fw-bold text-dark">Divisidev</a>
+                                </strong>
+                            </div>
+                            <div>
+                                <strong>
+                                    v. 1.0
+                                </strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
         </div>
         @stack('scripts')
     </body>
