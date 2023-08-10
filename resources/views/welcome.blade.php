@@ -24,7 +24,7 @@
 <meta property="og:locale" content="id_ID">
 @endsection
 @section('content')
-<div class="container pt-5">
+<div class="container">
     <div class="row">
         <div class="col-sm-12 col-md-12 col-lg-6">
             <div class="card bg-white border rounded text-dark mb-3">

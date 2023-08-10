@@ -102,7 +102,9 @@
                 </div>
             </nav>
             <main class="py-4 @hasSection('bg_color') @yield('bg_color') @else bg-white @endif">
-                @yield('content')
+                <div class="pt-5">
+                    @yield('content')
+                </div>
             </main>
             <footer class="border border-top bg-white">
                 <div class="container py-3">

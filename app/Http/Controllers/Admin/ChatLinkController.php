@@ -41,7 +41,15 @@ class ChatLinkController extends Controller
                     return $short_url;
                 })
                 ->addColumn('visits', function ($item) {
-                    return $item->shortUrl->visits->count();
+                    $short_url = $item->shortUrl;
+
+                    if ($short_url) {
+                        $visits = $short_url->visits ? $short_url->visits->count() : 0;
+                    } else {
+                        $visits = 0;
+                    }
+
+                    return $visits;
                 })
                 ->addColumn('action', function ($item) {
                     $button =   '<div class="dropdown">
