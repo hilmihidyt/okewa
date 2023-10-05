@@ -17,7 +17,7 @@
 <meta name="keywords" content="whatsapp link generator, whatsapp link, whatsapp link generator indonesia">
 <meta property="og:title" content="WhatsApp Link Generator - {{ config('app.name') }}">
 <meta property="og:description" content="WhatsApp Link Generator adalah alat yang inovatif dan efisien yang dirancang khusus untuk memudahkan komunikasi Anda melalui WhatsApp. Dengan alat ini, Anda dapat membuat tautan khusus yang akan mengarahkan orang langsung ke obrolan WhatsApp dengan Anda">
-<meta property="og:image" content="{{ asset('images/hero.png') }}">
+<meta property="og:image" content="{{ asset('images/favicon.png') }}">
 <meta property="og:url" content="{{ url()->current() }}">
 <meta property="og:site_name" content="{{ config('app.name') }}">
 <meta property="og:type" content="website">
