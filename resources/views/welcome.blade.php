@@ -1,27 +1,18 @@
 @extends('layouts.app')
 @section('title','WhatsApp Link Generator')
 @section('styles')
-<style>
-    #qrCode img{
-        margin-right: auto;
-        margin-left: auto;
-        max-width: 100%;
-        height: auto;
-    }
-</style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/css/intlTelInput.css">
 @endsection
-@section('bg_color','bg-whatsapp')
 @section('seo')
-<meta name="description" content="WhatsApp Link Generator adalah alat yang inovatif dan efisien yang dirancang khusus untuk memudahkan komunikasi Anda melalui WhatsApp. Dengan alat ini, Anda dapat membuat tautan khusus yang akan mengarahkan orang langsung ke obrolan WhatsApp dengan Anda">
-<meta name="keywords" content="whatsapp link generator, whatsapp link, whatsapp link generator indonesia">
+<meta name="description" content="Send WhatsApp messages easily with WhatsApp Link Generator. Create custom links, share on social media, and streamline communication. Free and user-friendly!">
+<meta name="keywords" content="WhatsApp, link generator, custom links, WhatsApp messages, direct chat, social media sharing, communication tool, free tool, user-friendly, business communication">
 <meta property="og:title" content="WhatsApp Link Generator - {{ config('app.name') }}">
-<meta property="og:description" content="WhatsApp Link Generator adalah alat yang inovatif dan efisien yang dirancang khusus untuk memudahkan komunikasi Anda melalui WhatsApp. Dengan alat ini, Anda dapat membuat tautan khusus yang akan mengarahkan orang langsung ke obrolan WhatsApp dengan Anda">
+<meta property="og:description" content="Send WhatsApp messages easily with WhatsApp Link Generator. Create custom links, share on social media, and streamline communication. Free and user-friendly!">
 <meta property="og:image" content="{{ asset('images/favicon.png') }}">
 <meta property="og:url" content="{{ url()->current() }}">
 <meta property="og:site_name" content="{{ config('app.name') }}">
 <meta property="og:type" content="website">
-<meta property="og:locale" content="id_ID">
+<meta property="og:locale" content="en_US">
 @endsection
 @section('content')
 <div class="container">
@@ -37,31 +28,31 @@
                    <form action="" id="form" method="POST">
                     @csrf
                     <div class="mb-3">
-                        <label for="phone" class="form-label">No. Whatsapp</label> <br>
-                        <input type="tel" name="phone" id="phone" class="form-control" placeholder="82xxxxxxxxx" required>
+                        <label for="phone" class="form-label fw-medium">Type your WhatsApp phone number</label> <br>
+                        <input type="tel" name="phone" id="phone" class="form-control input-border" placeholder="82xxxxxxxxx" required>
                         <div id="phone_feedback"></div>
                         <input type="hidden" name="wa_id" id="wa_id">
                     </div>
                     <div class="mb-3">
-                        <label for="message" class="form-label">Message</label> <br>
+                        <label for="message" class="form-label fw-medium">Message</label> <br>
                         <div class="btn-group mb-2" role="group" aria-label="Basic example">
                             <button type="button" onclick="bold()" class="btn btn-secondary" title="Bold">
-                                B
+                                <i class="bi bi-type-bold"></i>
                             </button>
                             <button type="button" onclick="strikethrough()" class="btn btn-secondary" title="Strikethrough">
-                                S
+                                <i class="bi bi-type-strikethrough"></i>
                             </button>
                             <button type="button" onclick="italic()" class="btn btn-secondary" title="Italic">
-                                I
+                                <i class="bi bi-type-italic"></i>
                             </button>
                             <button type="button" onclick="monospace()" class="btn btn-secondary" title="Monospace">
-                                M
+                                <i class="bi bi-code-slash"></i>
                             </button>
-                            {{-- <button class="btn btn-primary emoji" title="Emoji">
+                            {{-- <button class="btn btn-secondary emoji" title="Emoji">
                                 😀
                             </button> --}}
                         </div>
-                        <textarea cols="30" rows="10" name="message" id="message" class="message form-control" placeholder="Message" required></textarea>
+                        <textarea cols="30" rows="10" name="message" id="message" class="message form-control input-border" placeholder="Message" required></textarea>
                     </div>
                     <button class="btn btn-whatsapp" type="button" id="submitBtn">
                         <span id="generatorBtn">
@@ -81,50 +72,50 @@
                 <div class="card rounded bg-white text-dark border">
                     <div class="card-body">
                         <h1 class="fs-5 fw-bold">
-                            WhatsApp Link Generator - Mudah dan Cepat Kirim Pesan ke WhatsApp!
+                            WhatsApp Link Generator - Send Messages to WhatsApp Quickly and Easily!
                         </h1>
                         <p>
-                            Apakah Anda ingin mempermudah proses mengirim pesan melalui WhatsApp? Kami memiliki solusi tepat untuk Anda! Perkenalkan WhatsApp Link Generator, alat revolusioner yang akan membantu Anda mengirim pesan langsung ke teman, keluarga, atau pelanggan melalui WhatsApp dengan cepat dan mudah. Mari kita jelajahi fitur-fitur hebat dari alat ini!
+                            Do you want to simplify the process of sending messages via WhatsApp? We have the perfect solution for you! Introducing the WhatsApp Link Generator, a revolutionary tool that will help you send messages directly to friends, family, or customers via WhatsApp quickly and easily. Let's explore the great features of this tool!
                         </p>
                         <p>
-                            <strong>WhatsApp Link Generator</strong> adalah alat yang inovatif dan efisien yang dirancang khusus untuk memudahkan komunikasi Anda melalui WhatsApp. Dengan alat ini, Anda dapat membuat tautan khusus yang akan mengarahkan orang langsung ke obrolan WhatsApp dengan Anda. Tidak perlu lagi mencari nomor WhatsApp seseorang atau menambahkannya ke daftar kontak Anda. Cukup bagikan tautan, dan orang lain dapat menghubungi Anda dengan satu klik saja!
+                            The WhatsApp Link Generator is an innovative and efficient tool designed specifically to facilitate your communication through WhatsApp. With this tool, you can create custom links that will direct people straight to a WhatsApp chat with you. No more searching for someone's WhatsApp number or adding them to your contact list. Simply share the link, and others can contact you with just one click!
                         </p>
                         <h2 class="fs-5 fw-bold">
-                            Fitur WhatsApp Link Generator:
+                            Features of the WhatsApp Link Generator:
                         </h2>
                         <ol>
                             <li>
-                                Pembuatan Tautan Kustom: Anda dapat membuat tautan khusus yang terhubung langsung ke nomor WhatsApp Anda. Tautan ini dapat Anda sesuaikan dengan nama, pesan pembuka, atau bahkan emoji untuk menarik perhatian.
+                                Custom Link Creation: You can create custom links that connect directly to your WhatsApp number. These links can be personalized with a name, opening message, or even emojis to grab attention.
                             </li>
                             <li>
-                                Penggunaan Mudah dan Intuitif: <strong>WhatsApp Link Generator</strong> dirancang agar mudah digunakan, bahkan bagi orang yang tidak terbiasa dengan teknologi. Hanya dalam beberapa langkah sederhana, tautan khusus Anda siap digunakan.
+                                Easy and Intuitive Use: The WhatsApp Link Generator is designed to be user-friendly, even for those not familiar with technology. In just a few simple steps, your custom link is ready to use.
                             </li>
                             <li>
-                                Berbagi Langsung ke Media Sosial: Anda dapat dengan mudah berbagi tautan WhatsApp kustom Anda ke platform media sosial seperti Facebook, Instagram, Twitter, dan lainnya. Tingkatkan visibilitas Anda dan buat orang lain lebih mudah menghubungi Anda.
+                                Direct Sharing to Social Media: You can easily share your custom WhatsApp link on social media platforms like Facebook, Instagram, Twitter, and more. Increase your visibility and make it easier for others to contact you.
                             </li>
                             <li>
-                                Cocok untuk Bisnis dan Komunikasi Pribadi: Alat ini berguna tidak hanya bagi individu tetapi juga bagi bisnis. Jika Anda memiliki bisnis, <strong>WhatsApp Link Generator</strong> adalah cara yang efektif untuk memudahkan pelanggan berkomunikasi dengan Anda secara langsung.
+                                Suitable for Business and Personal Communication: This tool is useful not only for individuals but also for businesses. If you have a business, the WhatsApp Link Generator is an effective way to make it easier for customers to communicate with you directly.
                             </li>
                             <li>
-                                Gratis dan Tanpa Iklan: Kami percaya bahwa alat ini harus tersedia untuk semua orang tanpa biaya dan iklan yang mengganggu. <strong>WhatsApp Link Generator</strong> sepenuhnya gratis untuk digunakan tanpa ada gangguan iklan.
+                                Free and Ad-Free: We believe this tool should be available to everyone without cost and annoying ads. The WhatsApp Link Generator is completely free to use without any ad interruptions.
                             </li>
                         </ol>
                         <h3 class="fs-5 fw-bold">
-                            Mengapa Memilih WhatsApp Link Generator?
+                            Why Choose the WhatsApp Link Generator?
                         </h3>
                         <ol>
                             <li>
-                                Mempercepat Komunikasi: Tidak perlu lagi mengetik nomor WhatsApp atau menambahkan orang baru ke kontak. Tautan kustom akan mengarahkan orang langsung ke obrolan dengan Anda.
+                                Speed Up Communication: No more typing WhatsApp numbers or adding new people to your contacts. Custom links will direct people straight to a chat with you.
                             </li>
                             <li>
-                                Fleksibilitas dan Kepribadian: Anda dapat menyesuaikan tautan Anda dengan nama, pesan, atau emoji yang mencerminkan kepribadian Anda atau merek bisnis Anda.
+                                Flexibility and Personality: You can customize your link with names, messages, or emojis that reflect your personality or business brand.
                             </li>
                             <li>
-                                Praktis dan Efisien: <strong>WhatsApp Link Generator</strong> dirancang dengan fokus pada kemudahan penggunaan dan efisiensi, membuatnya menjadi alat yang sangat praktis.
+                                Practical and Efficient: The WhatsApp Link Generator is designed with a focus on ease of use and efficiency, making it a very practical tool.
                             </li>
                         </ol>
                         <p>
-                            Jadi, tunggu apa lagi? Segera gunakan <strong>WhatsApp Link Generator</strong> dan nikmati kemudahan mengirim pesan melalui WhatsApp tanpa ribet. Mulai gunakan alat ini sekarang juga dan saksikan betapa cepatnya Anda dapat terhubung dengan orang-orang di sekitar Anda. Terima kasih telah memilih <strong>WhatsApp Link Generator!</strong>
+                            So, what are you waiting for? Start using the WhatsApp Link Generator and enjoy the convenience of sending messages via WhatsApp without any hassle. Start using this tool now and see how quickly you can connect with people around you. Thank you for choosing the WhatsApp Link Generator!
                         </p>
                     </div>
                 </div>
@@ -147,37 +138,56 @@
                             </div>
                             <div class="d-flex justify-content-between">
                                 <div class="row mx-auto">
-                                    <div class="col-lg-6 col-md-12 col-sm-12 text-start">
+                                    <div class="col-md-12">
+                                        <a href="javascript:void(0);" class="btn btn-whatsapp w-100" id="downloadQrcode">Download QR Code</a>
+                                    </div>
+                                    <div class="col-md-12 text-start mt-2">
                                         <div class="mb-3">
+                                            <label for="wa_link" class="form-label fw-medium text-start">
+                                                Long URL
+                                            </label>
                                             <div class="input-group">
-                                                <input type="text" name="url_shortened" id="url_shortened" class="form-control border border-secondary" placeholder="URL" aria-label="URL" aria-describedby="copyBtn" readonly>
+                                                <input type="text" name="wa_link" id="wa_link" class="form-control border border-secondary" placeholder="URL" aria-label="waLinkCopyBtn" aria-describedby="waLinkCopyBtn" readonly>
+                                                <button class="btn btn-outline-secondary" id="waLinkCopyBtn">
+                                                    <i class="bi bi-clipboard-fill"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="url_shortened" class="form-label fw-medium">
+                                                Shortened URL
+                                            </label>
+                                            <input type="hidden" name="id" id="link_id">
+                                            <div class="input-group">
+                                                <input type="text" name="url_shortened" id="url_shortened" class="form-control border border-secondary border-end-0" placeholder="URL" aria-label="URL" aria-describedby="copyBtn" readonly>
                                                 <button class="btn btn-outline-secondary" id="copyBtn">
                                                     <i class="bi bi-clipboard-fill"></i>
                                                 </button>
+                                                <button class="btn btn-outline-secondary" type="button" id="edit">
+                                                    <i class="bi bi-pencil-fill"></i>
+                                                </button>
                                             </div>  
-                                            <small class="text-muted">
-                                                Fitur Edit akan segera hadir!
-                                            </small>
                                         </div>
                                     </div>
-                                    <div class="col-lg-6 col-md-12 col-sm-12">
-                                        <a href="javascript:void(0);" class="btn btn-primary w-100" id="downloadQrcode">Download QR Code</a>
+                                    <div class="col-md-12 text-start d-none" id="edit-wrapper">
+                                        <form action="#" id="update-url" method="POST">
+                                            @csrf
+                                            <label for="custom_url" class="form-label fw-medium">
+                                                Custom URL
+                                            </label>
+                                            <div class="input-group">
+                                                <span class="input-group-text border border-secondary bg-primary-subtle">
+                                                    {{ config('app.url') }}/go/
+                                                </span>
+                                                <input type="text" name="custom_url" id="custom_url" class="form-control border border-secondary" placeholder="Custom URL" aria-label="Custom URL" aria-describedby="submitCustomUrl">
+                                                <button class="btn btn-outline-secondary" id="submitCustomUrl" type="button">
+                                                    <i class="bi bi-check2"></i>
+                                                </button>
+                                            </div>
+                                        </form>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card border rounded bg-white">
-                    <div class="card-body">
-                        <label for="long_url" class="form-label text-start">
-                            Long URL
-                        </label>
-                        <div class="input-group">
-                            <input type="text" name="wa_link" id="wa_link" class="form-control border border-secondary" placeholder="URL" aria-label="waLinkCopyBtn" aria-describedby="waLinkCopyBtn" readonly>
-                            <button class="btn btn-outline-secondary" id="waLinkCopyBtn">
-                                <i class="bi bi-clipboard-fill"></i>
-                            </button>
                         </div>
                     </div>
                 </div>
@@ -189,183 +199,6 @@
 @push('scripts')
 <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/intlTelInput.min.js"></script>
 <script src="{{ asset('vendor/qrcode/qrcode.min.js') }}"></script>
-<script>
-    function bold(){
-        var textarea = document.getElementById('message');
-        var start = textarea.selectionStart;
-        var end = textarea.selectionEnd;
-        var selectedText = textarea.value.substring(start, end);
-        var newText = textarea.value.substring(0, start) + '*' + selectedText + '*' + textarea.value.substring(end);
-        textarea.value = newText;
-    }
-    function strikethrough(){
-        var textarea = document.getElementById('message');
-        var start = textarea.selectionStart;
-        var end = textarea.selectionEnd;
-        var selectedText = textarea.value.substring(start, end);
-        var newText = textarea.value.substring(0, start) + '~' + selectedText + '~' + textarea.value.substring(end);
-        textarea.value = newText;
-    }
-    function italic(){
-        var textarea = document.getElementById('message');
-        var start = textarea.selectionStart;
-        var end = textarea.selectionEnd;
-        var selectedText = textarea.value.substring(start, end);
-        var newText = textarea.value.substring(0, start) + '_' + selectedText + '_' + textarea.value.substring(end);
-        textarea.value = newText;
-    }
-    function monospace(){
-        var textarea = document.getElementById('message');
-        var start = textarea.selectionStart;
-        var end = textarea.selectionEnd;
-        var selectedText = textarea.value.substring(start, end);
-        var newText = textarea.value.substring(0, start) + '```' + selectedText + '```' + textarea.value.substring(end);
-        textarea.value = newText;
-    }
-
-</script>
-<script type="module">
-    var qrcode = new QRCode("qrCode", {
-        text: "{{ config('app.url') }}",
-        width: 256,
-        height: 256,
-        colorDark : "#000000",
-        colorLight : "#ffffff",
-        correctLevel : QRCode.CorrectLevel.H
-    });
-
-    var phone = document.querySelector("#phone");
-    var iti = intlTelInput(phone, {
-        initialCountry: "auto",
-        hiddenInput: "full_phone",
-        geoIpLookup: callback => {
-            fetch("https://ipapi.co/json")
-            .then(res => res.json())
-            .then(data => callback(data.country_code))
-            .catch(() => callback("id"));
-        },
-        customPlaceholder: function(selectedCountryPlaceholder, selectedCountryData) {
-            return "e.g. " + selectedCountryPlaceholder;
-        },
-        utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/utils.js",
-    });
-
-    phone.addEventListener('input', function() {
-        var fullNumber = iti.getNumber();
-        document.getElementById('wa_id').value = fullNumber;
-    });
-
-    phone.addEventListener('countrychange', function() {
-        var fullNumber = iti.getNumber();
-        document.getElementById('wa_id').value = fullNumber;
-    });
-    
-    $('#submitBtn').on('click',function(e){
-        e.preventDefault();
-        //if phone number is empty
-        if($('#phone').val() == ''){
-            //add is-invalid class to #page_name
-            $('#phone').addClass('is-invalid');
-            $('#phone').on('keyup',function(){
-                $('#phone').removeClass('is-invalid');
-                $('#phone').parent().find('.invalid-feedback').remove();
-            });
-            return false;
-        }
-        var token = $('meta[name="csrf-token"]').attr('content');
-        var url   = "{{ route('generate-whatsapp-link') }}";
-        var wa_id = iti.getNumber();
-
-        qrcode.clear(); 
-
-        //add disabled attribute to button #submitBtn
-        $('#submitBtn').attr('disabled',true);
-        $('#generatorBtn').addClass('d-none');
-        $('#spinner').removeClass('d-none');
-
-        $.ajax({
-            url: url,
-            type: 'POST',
-            headers: {
-                'X-CSRF-TOKEN': token
-            },
-            data: {
-                _token: "{{ csrf_token() }}",
-                phone: wa_id,
-                message: $('#message').val()
-            },
-            success: function(data){
-                Swal.fire({
-                    icon: 'success',
-                    title: 'Success!',
-                    text: 'Your link has been generated!',
-                    showConfirmButton: false,
-                    timer: 1500
-                });
-
-                $('#info-card').addClass('d-none');
-                $('#shortenedCard').removeClass('d-none');
-                $('#url_shortened').val(data.short_url);
-                $('#wa_link').val(data.wa_link);
-                qrcode.makeCode(data.wa_link);
-                //remove disabled attribute to button #submitBtn
-                $('#submitBtn').attr('disabled',false);
-                $('#generatorBtn').removeClass('d-none');
-                $('#spinner').addClass('d-none');
-            },
-            error: function(xhr){
-                var res = xhr.responseJSON;
-                Swal.fire({
-                    icon: 'error',
-                    title: 'Oops...',
-                    text: res.message,
-                    showConfirmButton: false,
-                    timer: 1500
-                });
-
-                //remove disabled attribute to button #submitBtn
-                $('#submitBtn').attr('disabled',false);
-                $('#generatorBtn').removeClass('d-none');
-                $('#spinner').addClass('d-none');
-            }
-        });
-    });
-    $('#copyBtn').click(function(){
-        $('#url_shortened').select();
-        document.execCommand('copy');
-        $(this).html('Copied!');
-        Swal.fire({
-            icon: 'success',
-            title: 'Success!',
-            text: 'Your link has been copied!',
-            showConfirmButton: false,
-            timer: 1500
-        });
-    });
-
-    $('#waLinkCopyBtn').click(function(){
-        $('#wa_link').select();
-        document.execCommand('copy');
-        $(this).html('Copied!');
-        Swal.fire({
-            icon: 'success',
-            title: 'Success!',
-            text: 'Your link has been copied!',
-            showConfirmButton: false,
-            timer: 1500
-        });
-    });
-
-    $('#downloadQrcode').click(function(){
-        var canvas = document.querySelector('#qrCode canvas');
-        var dataURL = canvas.toDataURL('image/png');
-        var a = document.createElement('a');
-        a.href = dataURL;
-        a.download = 'qrcode.png';
-        document.body.appendChild(a);
-        a.click();
-        document.body.removeChild(a);
-    });
-
-</script>
+<script src="{{ asset('js/copy.js') }}"></script>
+<script src="{{ asset('js/home.js') }}" type="module"></script>
 @endpush

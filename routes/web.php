@@ -14,10 +14,6 @@ use App\Http\Controllers\Admin\ChatLinkController as AdminChatLinkController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::get('optimized', function () {
-    \Artisan::call('optimize');
-});
-
 Route::get('/', function () {
     return view('welcome');
 });
@@ -27,7 +23,7 @@ Route::get('about', function(){
 })->name('about');
 
 Route::post('whatsapp-link-generator',[ChatLinkController::class, 'generateWaLink'])->name('generate-whatsapp-link');
-
+Route::post('custom-short-url/{ulid}',[ChatLinkController::class, 'customShortUrl'])->name('custom-short-url');
 Auth::routes(['register' => false]);
 
 Route::get('chat-link/{id}/analytic',[AdminChatLinkController::class, 'analytic'])->name('chat-link.analytic')->middleware('auth');

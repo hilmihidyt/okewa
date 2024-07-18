@@ -112,7 +112,7 @@
                         <div class="d-flex justify-content-between">
                             <div>
                                 <strong>
-                                    Copyright &copy; {{ date('Y') }} <a href="{{ config('app.url') }}" class="text-decoration-none fw-bold text-dark">{{ config('app.name') }}</a> by <a href="https://divisidev.com" target="_blank" class="text-decoration-none fw-bold text-dark">Divisidev</a>
+                                    Copyright &copy; {{ date('Y') }} <a href="{{ config('app.url') }}" class="text-decoration-none fw-bold text-dark">{{ config('app.name') }}</a> by <a href="https://codevina.com" target="_blank" class="text-decoration-none fw-bold text-dark">Codevina</a>
                                 </strong>
                             </div>
                             <div>

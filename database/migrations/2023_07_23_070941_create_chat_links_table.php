@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('chat_links', function (Blueprint $table) {
-            $table->id();
+            $table->ulid('id');
             $table->text('phone');
             $table->longText('message');
             $table->longText('wa_link');

@@ -1,22 +1,11 @@
 @extends('layouts.app')
 @section('title','WhatsApp Link Generator')
-@section('styles')
-<style>
-    #qrCode img{
-        margin-right: auto;
-        margin-left: auto;
-        max-width: 100%;
-        height: auto;
-    }
-</style>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/css/intlTelInput.css">
-@endsection
 @section('bg_color','bg-whatsapp')
 @section('seo')
-<meta name="description" content="WhatsApp Link Generator adalah alat yang inovatif dan efisien yang dirancang khusus untuk memudahkan komunikasi Anda melalui WhatsApp. Dengan alat ini, Anda dapat membuat tautan khusus yang akan mengarahkan orang langsung ke obrolan WhatsApp dengan Anda">
-<meta name="keywords" content="whatsapp link generator, whatsapp link, whatsapp link generator indonesia">
+<meta name="description" content="Send WhatsApp messages easily with WhatsApp Link Generator. Create custom links, share on social media, and streamline communication. Free and user-friendly!">
+<meta name="keywords" content="WhatsApp, link generator, custom links, WhatsApp messages, direct chat, social media sharing, communication tool, free tool, user-friendly, business communication">
 <meta property="og:title" content="WhatsApp Link Generator - {{ config('app.name') }}">
-<meta property="og:description" content="WhatsApp Link Generator adalah alat yang inovatif dan efisien yang dirancang khusus untuk memudahkan komunikasi Anda melalui WhatsApp. Dengan alat ini, Anda dapat membuat tautan khusus yang akan mengarahkan orang langsung ke obrolan WhatsApp dengan Anda">
+<meta property="og:description" content="Send WhatsApp messages easily with WhatsApp Link Generator. Create custom links, share on social media, and streamline communication. Free and user-friendly!">
 <meta property="og:image" content="{{ asset('images/hero.png') }}">
 <meta property="og:url" content="{{ url()->current() }}">
 <meta property="og:site_name" content="{{ config('app.name') }}">
@@ -31,50 +20,50 @@
                 <div class="card rounded bg-white text-dark border">
                     <div class="card-body">
                         <h1 class="fs-5 fw-bold">
-                            WhatsApp Link Generator - Mudah dan Cepat Kirim Pesan ke WhatsApp!
+                            WhatsApp Link Generator - Easily and Quickly Send Messages to WhatsApp!
                         </h1>
                         <p>
-                            Apakah Anda ingin mempermudah proses mengirim pesan melalui WhatsApp? Kami memiliki solusi tepat untuk Anda! Perkenalkan WhatsApp Link Generator, alat revolusioner yang akan membantu Anda mengirim pesan langsung ke teman, keluarga, atau pelanggan melalui WhatsApp dengan cepat dan mudah. Mari kita jelajahi fitur-fitur hebat dari alat ini!
+                            Do you want to simplify the process of sending messages via WhatsApp? We have the perfect solution for you! Introducing WhatsApp Link Generator, a revolutionary tool that will help you send messages directly to friends, family, or customers via WhatsApp quickly and easily. Let's explore the great features of this tool!
                         </p>
                         <p>
-                            WhatsApp Link Generator adalah alat yang inovatif dan efisien yang dirancang khusus untuk memudahkan komunikasi Anda melalui WhatsApp. Dengan alat ini, Anda dapat membuat tautan khusus yang akan mengarahkan orang langsung ke obrolan WhatsApp dengan Anda. Tidak perlu lagi mencari nomor WhatsApp seseorang atau menambahkannya ke daftar kontak Anda. Cukup bagikan tautan, dan orang lain dapat menghubungi Anda dengan satu klik saja!
+                            WhatsApp Link Generator is an innovative and efficient tool designed specifically to make your communication through WhatsApp easier. With this tool, you can create custom links that will direct people straight to a WhatsApp chat with you. No more searching for someone's WhatsApp number or adding them to your contact list. Just share the link, and others can contact you with just one click!
                         </p>
                         <h2 class="fs-5 fw-bold">
-                            Fitur WhatsApp Link Generator:
+                            Features of WhatsApp Link Generator:
                         </h2>
                         <ol>
                             <li>
-                                Pembuatan Tautan Kustom: Anda dapat membuat tautan khusus yang terhubung langsung ke nomor WhatsApp Anda. Tautan ini dapat Anda sesuaikan dengan nama, pesan pembuka, atau bahkan emoji untuk menarik perhatian.
+                                Custom Link Creation: You can create custom links that connect directly to your WhatsApp number. These links can be customized with a name, opening message, or even emojis to catch attention.
                             </li>
                             <li>
-                                Penggunaan Mudah dan Intuitif: WhatsApp Link Generator dirancang agar mudah digunakan, bahkan bagi orang yang tidak terbiasa dengan teknologi. Hanya dalam beberapa langkah sederhana, tautan khusus Anda siap digunakan.
+                                Easy and Intuitive Use: WhatsApp Link Generator is designed to be user-friendly, even for those not familiar with technology. In just a few simple steps, your custom link is ready to use.
                             </li>
                             <li>
-                                Berbagi Langsung ke Media Sosial: Anda dapat dengan mudah berbagi tautan WhatsApp kustom Anda ke platform media sosial seperti Facebook, Instagram, Twitter, dan lainnya. Tingkatkan visibilitas Anda dan buat orang lain lebih mudah menghubungi Anda.
+                                Direct Sharing to Social Media: You can easily share your custom WhatsApp link on social media platforms like Facebook, Instagram, Twitter, and more. Increase your visibility and make it easier for others to contact you.
                             </li>
                             <li>
-                                Cocok untuk Bisnis dan Komunikasi Pribadi: Alat ini berguna tidak hanya bagi individu tetapi juga bagi bisnis. Jika Anda memiliki bisnis, WhatsApp Link Generator adalah cara yang efektif untuk memudahkan pelanggan berkomunikasi dengan Anda secara langsung.
+                                Suitable for Business and Personal Communication: This tool is useful not only for individuals but also for businesses. If you have a business, WhatsApp Link Generator is an effective way to facilitate direct communication with your customers.
                             </li>
                             <li>
-                                Gratis dan Tanpa Iklan: Kami percaya bahwa alat ini harus tersedia untuk semua orang tanpa biaya dan iklan yang mengganggu. WhatsApp Link Generator sepenuhnya gratis untuk digunakan tanpa ada gangguan iklan.
+                                Free and Ad-Free: We believe this tool should be available to everyone without cost and annoying ads. WhatsApp Link Generator is completely free to use without any ad interruptions.
                             </li>
                         </ol>
                         <h3 class="fs-5 fw-bold">
-                            Mengapa Memilih WhatsApp Link Generator?
+                            Why Choose WhatsApp Link Generator?
                         </h3>
                         <ol>
                             <li>
-                                Mempercepat Komunikasi: Tidak perlu lagi mengetik nomor WhatsApp atau menambahkan orang baru ke kontak. Tautan kustom akan mengarahkan orang langsung ke obrolan dengan Anda.
+                                Speed Up Communication: No more typing WhatsApp numbers or adding new people to contacts. Custom links will direct people straight to a chat with you.
                             </li>
                             <li>
-                                Fleksibilitas dan Kepribadian: Anda dapat menyesuaikan tautan Anda dengan nama, pesan, atau emoji yang mencerminkan kepribadian Anda atau merek bisnis Anda.
+                                Flexibility and Personality: You can customize your link with a name, message, or emoji that reflects your personality or brand.
                             </li>
                             <li>
-                                Praktis dan Efisien: WhatsApp Link Generator dirancang dengan fokus pada kemudahan penggunaan dan efisiensi, membuatnya menjadi alat yang sangat praktis.
+                                Practical and Efficient: WhatsApp Link Generator is designed with a focus on ease of use and efficiency, making it a very practical tool.
                             </li>
                         </ol>
                         <p>
-                            Jadi, tunggu apa lagi? Segera gunakan WhatsApp Link Generator dan nikmati kemudahan mengirim pesan melalui WhatsApp tanpa ribet. Mulai gunakan alat ini sekarang juga dan saksikan betapa cepatnya Anda dapat terhubung dengan orang-orang di sekitar Anda. Terima kasih telah memilih WhatsApp Link Generator!
+                            So, what are you waiting for? Start using WhatsApp Link Generator and enjoy the ease of sending messages via WhatsApp without hassle. Start using this tool now and see how quickly you can connect with people around you. Thank you for choosing WhatsApp Link Generator!
                         </p>
                     </div>
                 </div>

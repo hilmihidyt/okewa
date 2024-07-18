@@ -10,13 +10,31 @@
 }
 
 .btn-whatsapp {
+    background-color: #128c7e !important;
+    border-color: #128c7e !important;
+    color: #fff !important;
+}
+
+.btn-whatsapp:hover, .btn-whatsapp:focus, .btn-whatsapp:active, .btn-whatsapp.active, .open .dropdown-toggle.btn-whatsapp {
     background-color: #25d366 !important;
     border-color: #25d366 !important;
     color: #fff !important;
 }
 
-.btn-whatsapp:hover, .btn-whatsapp:focus, .btn-whatsapp:active, .btn-whatsapp.active, .open .dropdown-toggle.btn-whatsapp {
-    background-color: #128c7e !important;
-    border-color: #128c7e !important;
-    color: #fff !important;
+.form-control:focus {
+    box-shadow: unset !important;
+}
+
+.input-border:focus{
+    border-left: 1px solid var(--bs-body-color) !important;
+    border-right: 3px solid var(--bs-body-color) !important;
+    border-top: 1px solid var(--bs-body-color) !important;
+    border-bottom: 3px solid var(--bs-body-color) !important;
+}
+
+#qrCode img{
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 100%;
+    height: auto;
 }
