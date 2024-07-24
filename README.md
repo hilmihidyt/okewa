@@ -1,4 +1,4 @@
-🔗 **Okewa or Whatsapp Link Generator** is an innovative tool that allows you to generate special Whatsapp links that directly connect to your mobile number. By using this tool, friends, family, and customers can contact you by simply clicking the link.
+🔗 **Whatsapp Link Generator** is an innovative tool that allows you to generate special Whatsapp links that directly connect to your mobile number. By using this tool, friends, family, and customers can contact you by simply clicking the link.
 
 ## Advantages of using WhatsApp Link Generator:
 
@@ -19,4 +19,4 @@
 > *This is open source, you can contribute to this project to make it even better. If you like this project, don't forget to click the
 > stars. **Okay**.*
 
-**Demo:** [Okewa.me](https://okewa.me)
+**Demo:** [Wazap.link](https://wazap.link)
